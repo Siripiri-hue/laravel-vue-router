@@ -31,6 +31,13 @@ Route::middleware('auth')
 });
 
 // rotta di fallback, restituisce la vista guest.home per qualsiasi indirizzo non intercettato dalle rotte precedenti
+
+// alternativa:
+// Route::fallback( function () {
+//     return view('guest.home');
+// });
+
 Route::get('{any?}', function () {
     return view ('guest.home');
 })->where('any', '.*');
+
