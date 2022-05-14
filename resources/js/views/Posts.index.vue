@@ -1,16 +1,19 @@
 <template>
   <div class="container">
       <h1>Lista post:</h1>
-      <div v-for="post in posts" :key="post.id">
-        {{ post.title }}
-      </div>
+      <Post v-for="post in posts" :key="post.id" :post="post" />
   </div>
 </template>
 
 <script>
 // import axios from "axios"; //importo axios
+import Post from '../components/PostDetails.vue';
 
 export default {
+    components: {
+        Post,
+    },
+
     data() {
         return {
             posts: [], //setto un array vuoto per riempirlo con i dati della chiamata

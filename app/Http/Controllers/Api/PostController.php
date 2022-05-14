@@ -16,7 +16,7 @@ class PostController extends Controller
     public function index()
     {
         // recuperare i post con l'api
-        $posts = Post::all();
+        $posts = Post::limit(20)->get();
         return response()->json([
             'posts' => $posts,
             'success' => 'true',
