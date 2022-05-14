@@ -29,3 +29,8 @@ Route::middleware('auth')
         Route::get('/home', 'HomeController@index')->name('home');
         Route::resource('posts', 'PostController');
 });
+
+// rotta di fallback, restituisce la vista guest.home per qualsiasi indirizzo non intercettato dalle rotte precedenti
+Route::get('{any?}', function () {
+    return view ('guest.home');
+})->where('any', '.*');
