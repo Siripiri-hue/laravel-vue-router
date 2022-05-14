@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// rotta collegata all'api PostController
+// tutte le rotte avranno in automatico il prefisso api
+Route::get('/posts', 'Api\PostController@index');
