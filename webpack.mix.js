@@ -11,5 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/admin.js', 'public/js')
+    .sass('resources/sass/admin.scss', 'public/css');
+// aggiungere qui file assets creati per compilarli
+mix.js('resources/js/front.js', 'public/js')
+    .sass('resources/sass/front.scss', 'public/css');
+
+// una volta aggiunti e fatta la divisione front/backoffice, si può cambiare nome ad app.js/app.scss
+// ricordarsi poi di cambiarli anche in layouts.app e aggiungere i nuovi nella nuova vista che sfrutta i file front
