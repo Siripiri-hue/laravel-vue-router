@@ -1,12 +1,20 @@
 // componente radice da montare su render, dopo averlo importato su front.js
 
 <template>
-  <h1>prova</h1>
+    <!-- aggiungere header con nav -->
+
+    <PostsList />
+    
+    <!-- aggiungere footer -->
 </template>
 
 <script>
-export default {
+import PostsList from './Posts.index.vue';
 
+export default {
+    components: {
+        PostsList,
+    }
 }
 </script>
 

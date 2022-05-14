@@ -27,7 +27,9 @@
 </head>
 
 <body>
-    <div id="root">prova</div>
+    <div id="root">
+        {{-- Qui viene montato il componente App --}}
+    </div>
 
     <script src="{{ asset('js/front.js') }}"></script>
 </body>
