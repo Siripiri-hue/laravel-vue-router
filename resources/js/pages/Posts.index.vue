@@ -7,7 +7,7 @@
 
 <script>
 // import axios from "axios"; //importo axios
-import Post from '../components/PostDetails.vue';
+import Post from '../components/PostCard.vue';
 
 export default {
     components: {

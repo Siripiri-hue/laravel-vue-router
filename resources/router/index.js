@@ -8,6 +8,7 @@ Vue.use(VueRouter);
 
 import Posts from '../js/pages/Posts.index.vue'; //importo la "vista" del componente
 import Contact from '../js/pages/Contact.vue';
+import PostShow from '../js/pages/Posts.show.vue';
 
 // definizione dell'array contenente le rotte da controllare con vue router
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
         path: '/contact',
         component: Contact,
         name: 'contact',
+    },
+    {
+        path: '/posts/:slug', //rotta alla visualizzazione del post con parametro, :slug
+        component: PostShow,
+        name: 'posts.show',
     },
 ];
 

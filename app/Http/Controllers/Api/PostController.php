@@ -50,9 +50,21 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $post = Post::where('slug', $slug)->first(); //recupero il post con lo slug uguale a quello recuperato dall'url
+        
+        if ($post) { //se c'è un post 
+            return response()->json([
+                'post' => $post,
+                'success' => true,
+            ]);
+        }
+
+        return response()->json([ // ritorno un messaggio di errore se il post non è stato trovato
+            'message' => 'Post not found',
+            'success' => false,
+        ], 404); 
     }
 
     /**

@@ -20,4 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // rotta collegata all'api PostController
 // tutte le rotte avranno in automatico il prefisso api
-Route::get('/posts', 'Api\PostController@index');
+// Route::get('/posts', 'Api\PostController@index');
+
+// trasformo la rotta in una rotta risorsa e creo solo le rotte index e show
+Route::resource('posts', 'Api\PostController')->only(['index', 'show']);
