@@ -2016,6 +2016,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2596,7 +2604,31 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("header", [_vm._v("header")]),
+      _c("header", [
+        _c("nav", [
+          _c("ul", [
+            _c(
+              "li",
+              [
+                _c("router-link", { attrs: { to: { name: "posts.index" } } }, [
+                  _vm._v("Post List"),
+                ]),
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              [
+                _c("router-link", { attrs: { to: { name: "contact" } } }, [
+                  _vm._v("Contact"),
+                ]),
+              ],
+              1
+            ),
+          ]),
+        ]),
+      ]),
       _vm._v(" "),
       _c("router-view"),
       _vm._v(" "),
