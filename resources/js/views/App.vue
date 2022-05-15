@@ -1,15 +1,18 @@
 // componente radice da montare su render, dopo averlo importato su front.js
 
 <template>
-    <!-- aggiungere header con nav -->
+    <div>
+        <header>header</header>
 
-    <PostsList />
-    
-    <!-- aggiungere footer -->
+        <!-- tag per visualizzare le rotte impostate con vue router -->
+        <router-view></router-view> 
+        
+        <footer>footer</footer>
+    </div>
 </template>
 
 <script>
-import PostsList from './Posts.index.vue';
+import PostsList from '../pages/Posts.index.vue';
 
 export default {
     components: {

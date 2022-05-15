@@ -11,13 +11,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 //  importazione vue da app.js
 window.Vue = require('vue'); // ∼ import Vue from 'vue';
-import App from './views/App.vue';
+import App from './views/App.vue'
 
 // importazione di vue router e utilizzo
 // import VueRouter from 'vue-router';
 // Vue.use(VueRouter);
 // poi le spostiamo in index.js e lo importiamo da lì, importando il file
-import router from './router' //importo l'istanza di vue router
+import router from '../router' //importo l'istanza di vue router, non bisogna specificare index perché automaticamente cercherà un index
 
 const app = new Vue({
     el: '#root', //cambio nome
